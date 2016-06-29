@@ -50,7 +50,7 @@ namespace FactorialSortirovkaShivrovanie
 			#endregion
 			#region Shifrovanie_Deshifrovka
 			// Shifrovanie
-			Console.WriteLine("Задача - Зашифровать слов ГАВ с помощью строки АБВГДЕЖ со смещением на key символов");
+			Console.WriteLine("Задача - Зашифровать любое слововведенное  клавиатуры через консоль с помощью строки simbol со смещением на key символов");
 			Console.WriteLine(" ");
 			Console.WriteLine("Введите слово для шифрования");
 			Console.WriteLine(" ");
@@ -58,7 +58,7 @@ namespace FactorialSortirovkaShivrovanie
 			Console.WriteLine(" ");
 			Console.WriteLine("Введите ключ (смещение по алгоритму Цезаря)");
 
-			string simbol = "АБВГДЕЖ";
+			string simbol = "1234567890АБВГДЕЁЖЗИЙКЛМНОПРСТУФХЧЦШЩЪЫЬЭЮЯабвгдеёжзийклмнопрстуфхцшщъыьэюяABCDIFGHIJKLMNOPQRSTUVWXYZabcdifghijklmnopqrstuvwxyz~!@#$%^&*()_+=-\\|/?\"'<>.`";
 			string save = " ";
 			string desave = " ";
 			// подсчет количества символов разрешенных для использования при шифровании
@@ -114,7 +114,7 @@ namespace FactorialSortirovkaShivrovanie
 			#endregion
 		}
 		//функция рассчета факториала
-		static int factoreial(int f)
+/*		static int factoreial(int f)
 		{
 			int n = 1;
 			for(int i =1;i<=f;i++)
@@ -122,6 +122,12 @@ namespace FactorialSortirovkaShivrovanie
 				n *= i;
 			}
 			return n;
+		}*/
+		//факториал через рекурсию
+		static int factoreial(int f)
+		{
+			if (f==1) { return 1;}
+			return factoreial(f-1)*f;
 		}
 		//функция для перебора массива из чисел во время сортировки
 		static void VivodMassivaChisla(int[] chisla)
